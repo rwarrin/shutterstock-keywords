@@ -37,14 +37,14 @@ func main() {
 		check(err)
 		if resp.Request.URL.RawQuery == "noid=1" {
 			fmt.Print(" ...ERROR! invalid ID \n")
-			_, err := f2.WriteString(scanner.Text() + ";" + "ERROR INVALID ID" + "\n")
+			_, err := f2.WriteString(scanner.Text() + ", " + "ERROR INVALID ID" + "\n")
 			check(err)
 			time.Sleep(time.Second * 5)
 			return
 		}
 		fmt.Print(" ...SUCCESS! \n")
 		kws := getKeywords(resp)
-		_, err = f2.WriteString(scanner.Text() + ";" + kws + "\n")
+		_, err = f2.WriteString(scanner.Text() + ", " + kws + "\n")
 		check(err)
 		time.Sleep(time.Second * 5)
 	}
