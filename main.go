@@ -18,6 +18,7 @@ import (
 const baseURL = "https://www.shutterstock.com/search/ids/"
 
 func main() {
+	// One shutterstock image ID per line
 	inputPtr := flag.String("i", "ssids.txt", "the name and extension of the input file, defaults to ssids.txt")
 	outputPtr := flag.String("o", "kws.csv", "the name and extension of the output file, defaults to kws.csv")
 	flag.Parse()
