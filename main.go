@@ -72,7 +72,7 @@ func getKeywords(resp *http.Response) string {
 	z := html.NewTokenizer(resp.Body)
 	defer resp.Body.Close()
 
-	var kws []string
+	var kws []stringa
 
 	fmt.Println("Building keywords list...")
 	for {
